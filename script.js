@@ -6,11 +6,14 @@ const options = {
     }
 };
 
+const getWeather= (city) =>{
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle', options)
     .then(response => response.json())
     .then(response => {
+
+
         console.log(response)
-        
+
         cloud_pct.innerHTML = response.cloud_pct
         temp.innerHTML = response.temp
         feels_like.innerHTML = response.feels_like
@@ -23,3 +26,9 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle', op
         sunset.innerHTML = response.sunset
     })
     .catch(err=> console.error(err));
+}
+
+Submit.addEventListner("click", (e)=>{
+    getWeather(city.value)
+})
+getWeather("Delhi")

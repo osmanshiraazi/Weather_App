@@ -1,11 +1,12 @@
-Cloud_pct
-Feels_like
-Humidity
-Max_temp
-Min_temp
-Sunrise
-Sunset
-Temp
-Wind_degrees
-Wind_speed
-hoiiii
+cloud_pct = response.cloud_pct
+temp = response.temp1
+feels_like = response.feels_like1
+humidity = response.humidity1
+min_temp = response.min_temp1
+max_temp = response.max_temp1
+wind_speed = response.wind_speed1
+wind_degrees = response.wind_degrees1
+sunrise = response.sunrise
+sunset = response.sunset
+
+.innerHTML
